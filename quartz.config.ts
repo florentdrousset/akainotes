@@ -8,8 +8,8 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
-    pageTitleSuffix: "",
+    pageTitle: "🐦‍🔥 akainotes",
+    pageTitleSuffix: "Welcome to my org notes",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
@@ -29,26 +29,26 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          light: "#fff9f9",        // Fond très pâle légèrement rosé
+          lightgray: "#f3eaea",    // Gris clair chaud
+          gray: "#c8b8b8",         // Gris doux teinté rose
+          darkgray: "#8c6f6f",     // Marron/rosé adouci
+          dark: "#5c3c3c",         // Brun rubis
+          secondary: "#a05c61",    // Rouge rubis doux (accent principal)
+          tertiary: "#d9a5b3",     // Rose sablé / beige rosé
+          highlight: "rgba(240, 110, 130, 0.1)", // survol léger rubis
+          textHighlight: "#ffd3da88", // surbrillance texte pastel
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#201618",        // Fond foncé légèrement pourpre
+          lightgray: "#3e2e30",    // Gris brun profond
+          gray: "#7a5e5e",         // Gris adouci avec une touche rouge
+          darkgray: "#e4c2c2",     // Clair chaud dans le dark mode
+          dark: "#f5e9e9",         // Blanc cassé rosé
+          secondary: "#e38b94",    // Rose rubis doux (accent)
+          tertiary: "#c5a6aa",     // Rose désaturé / pastel
+          highlight: "rgba(240, 110, 130, 0.15)", // Highlight douce
+          textHighlight: "#ffd3da88", // Surbrillance douce en dark aussi
         },
       },
     },
@@ -70,6 +70,7 @@ const config: QuartzConfig = {
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
+      Plugin.OxHugoFlavouredMarkdown,
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
     ],
